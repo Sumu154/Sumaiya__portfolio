@@ -1,0 +1,4 @@
+#banner{
+  position: relative;
+  background: url('../images/banner.png') center/cover no-repeat;
+}
