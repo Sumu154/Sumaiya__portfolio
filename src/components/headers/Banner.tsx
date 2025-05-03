@@ -1,18 +1,24 @@
 import React from 'react';
-
 import '@/assets/stylesheets/banner.css'
-import TypewriterP from '../ClientRenderedComponents/TypewriterP';
+import sumaiya from '@/assets/images/sumaiya.png'
+
+import BannerLeft from '../ClientRenderedComponents/BannerLeft';
+import Image from 'next/image';
+
+
 
 const Banner = () => {
   return (
-    <div id='banner' className='w-full pt-[100px]  '>
+    <div id='banner' className='w-full pt-[100px] sm:pt-[80px] md:pt-[50px] lg:pt-[30px]  '>
       
-      <div className='w-[90%] mx-auto '>
+      <div className='w-[95%] sm:w-[90%] md:w-[85%] mx-auto flex flex-col-reverse md:flex-row justify-between items-center '>
         {/* left */}
-      <div >
-        <h3 className='font-semibold text-5xl '> Hi, I am <span className='' > Mst Sumaiya Tasnim  </span> </h3>
-        <TypewriterP></TypewriterP>
-      </div>
+        <BannerLeft></BannerLeft>
+        
+        {/* right */}
+        <div className=''>
+          <Image src={sumaiya} alt='sumaiya' width={380}></Image>
+        </div>
       </div>
 
     </div>
